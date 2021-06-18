@@ -1,0 +1,37 @@
+[
+    {
+        "PlaceName": "Estacionamiento Gamer",
+        "Latitude": "21.12342597",
+        "Longitude": "-101.6487504"  
+    },
+    {
+        "PlaceName": "Estacionamiento del centro",
+        "Latitude": "21.1094517",
+        "Longitude": "-101.6296742"
+    },
+    {
+        "PlaceName": "Estacionamiento León",
+        "Latitude": "21.139564",
+        "Longitude": "-101.7156025"
+    },
+    {
+        "PlaceName": "Estacionamiento Manolo",
+        "Latitude": "21.1909038",
+        "Longitude": "-101.7057714"
+    },
+    {
+        "PlaceName": "Estacionamiento Los Leones",
+        "Latitude": "21.0614233",
+        "Longitude": "-100.5878369"
+    },
+    {
+        "PlaceName": "Estacionamiento Los Amigos",
+        "Latitude": "21.0412449",
+        "Longitude": "-101.6754001"
+    },
+    {
+        "PlaceName": "Estacionamiento de Gobierno",
+        "Latitude": "21.0145489",
+        "Longitude": "-101.4137826"
+    }
+]
