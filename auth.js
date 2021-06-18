@@ -3,7 +3,7 @@ auth.onAuthStateChanged( user =>{
     if(user){
         console.log('Usuario entró');
         db.collection('cards').onSnapshot(snapshot =>{
-            obtienePlatillos(snapshot.docs);
+            obtieneCards(snapshot.docs);
             configuraMenu(user);
         }, err => {
             console.log(err.message);
@@ -23,7 +23,7 @@ auth.onAuthStateChanged( user =>{
     }
     else{
         console.log('Usuario salió');
-        obtienePlatillos([]);
+        obtieneCards([]);
         configuraMenu();
     }
 

@@ -330,32 +330,30 @@ const configuraMenu = (user) => {
   }
 };
 
-const listadeplatillos = document.getElementById("cards");
+const listacards = document.getElementById("cards");
 
-const obtienePlatillos = (data) => {
+const obtieneCards = (data) => {
   if (data.length) {
     let html = "";
 
     data.forEach((doc) => {
       const card = doc.data();
-      console.log(platillo);
+      console.log(card);
       const columna = `
-                <div class="col-12 col-md-4">
-                    <img src="${card.imagen}" alt="${card.titulo}">
-                    <p>${card.titulo}</p>
-                    <p class="text-danger">$${card.subtitulo}.00 pesos</p>
-                  
-                        <button class="btn btn-primary">Pagar Ahora</button>
-                    </a>
-                </div>
+            <div class="card col-12 col-md-4">
+                  <a name="servicios"></a>
+                  <img src="${card.imagen}" alt="card1" class="w-100 rounded shadow">
+                  <h2 style="text-align:center;" class="p-3">${card.titulo}</h2>
+                  <p style="text-align: justify;">${card.subtitulo}</p>
+            </div>
             `;
 
       html += columna;
     });
 
-    listadeplatillos.innerHTML = html;
+    listacards.innerHTML = html;
   } else {
-    listadeplatillos.innerHTML =
-      '<p class="text-center">INICIE SESIÓN PARA PODER VER SUS PLATILLOS.</p>';
+    listacards.innerHTML =
+      '<p class="text-center">INICIE SESIÓN PARA PODER LAS TARJETAS.</p>';
   }
 };
