@@ -301,11 +301,7 @@ function iniciaMapa() {
       
       }
       )
-}
-
-const listaloggedout = document.querySelectorAll(".logged-out");
-const listaloggedin = document.querySelectorAll(".logged-in");
-const datosdelacuenta = document.querySelector(".datosdelacuenta");
+};
 const listaloggedout = document.querySelectorAll(".logged-out");
 const listaloggedin = document.querySelectorAll(".logged-in");
 const datosdelacuenta = document.querySelector(".datosdelacuenta");
@@ -341,13 +337,13 @@ const obtienePlatillos = (data) => {
     let html = "";
 
     data.forEach((doc) => {
-      const platillo = doc.data();
+      const card = doc.data();
       console.log(platillo);
       const columna = `
                 <div class="col-12 col-md-4">
-                    <img src="images/${platillo.imagen}" alt="${platillo.nombre}">
-                    <p>${platillo.nombre}</p>
-                    <p class="text-danger">$${platillo.precio}.00 pesos</p>
+                    <img src="${card.imagen}" alt="${card.titulo}">
+                    <p>${card.titulo}</p>
+                    <p class="text-danger">$${card.subtitulo}.00 pesos</p>
                   
                         <button class="btn btn-primary">Pagar Ahora</button>
                     </a>
