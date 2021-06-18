@@ -1,7 +1,3 @@
-const listaloggedout = document.querySelectorAll(".logged-out");
-const listaloggedin = document.querySelectorAll(".logged-in");
-const datosdelacuenta = document.querySelector(".datosdelacuenta");
-
 var initCoords = {
       lat: 21.128398,
       lng: -101.6486384
@@ -310,6 +306,9 @@ function iniciaMapa() {
 const listaloggedout = document.querySelectorAll(".logged-out");
 const listaloggedin = document.querySelectorAll(".logged-in");
 const datosdelacuenta = document.querySelector(".datosdelacuenta");
+const listaloggedout = document.querySelectorAll(".logged-out");
+const listaloggedin = document.querySelectorAll(".logged-in");
+const datosdelacuenta = document.querySelector(".datosdelacuenta");
 
 const configuraMenu = (user) => {
   if (user) {
@@ -335,7 +334,7 @@ const configuraMenu = (user) => {
   }
 };
 
-const listadeplatillos = document.getElementById("listadeplatillos");
+const listadeplatillos = document.getElementById("cards");
 
 const obtienePlatillos = (data) => {
   if (data.length) {
