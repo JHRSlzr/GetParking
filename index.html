@@ -1,236 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>GET PARKING</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-                  <nav style="width: 100%;" class="navbar navbar-expand-lg">
-                        <div class="container-fluid" style="width: 100%;">
-                        <img style="width: 50px; height:50px;" src="./images/GetParkingLogo.png"/>
-                          <a class="navbar-brand">GET PARKING</a>
-                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                          </button>
-                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                              <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">INICIO</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">NOSOTROS</a>
-                              </li>
-                              <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              PROMOCIONARSE
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <li><a class="dropdown-item" href="#">ESTACIONAMIENTOS</a></li>
-                                  <li><a class="dropdown-item" href="#">MARCAS</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                            <a class="nav-item nav-link logged-in" href="#" data-toggle="modal" data-target="#micuentamodal">MI CUENTA</a>
-                            <a class="nav-item nav-link logged-in" href="#" id="salir">SALIR</a>
-                            <a class="nav-item nav-link logged-out" href="#" data-toggle="modal"
-                                data-target="#ingresarmodal">INGRESAR</a>
-                            <a class="nav-item nav-link logged-out" href="#" data-toggle="modal"
-                                data-target="#registratemodal">REGÍSTRARSE</a>
-                          </div>
-                        </div>
-                      </nav>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GET PARKING</title>
+
+      <!-- Bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <nav style="width: 100%;" class="navbar navbar-expand-lg">
+    <div class="container-fluid" style="width: 100%;">
+      <img style="width: 50px; height:50px;" src="./images/GetParkingLogo.png" />
+      <a class="navbar-brand">GET PARKING</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NOSOTROS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              PROMOCIONARSE
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">ESTACIONAMIENTOS</a></li>
+              <li><a class="dropdown-item" href="#">MARCAS</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a class="nav-item nav-link logged-in" href="#" data-toggle="modal" data-target="#micuentamodal">MI CUENTA</a>
+        <a class="nav-item nav-link logged-in" href="#" id="salir">SALIR</a>
+        <a class="nav-item nav-link logged-out" href="#" data-toggle="modal" data-target="#ingresarmodal">INGRESAR</a>
+        <a class="nav-item nav-link logged-out" href="#" data-toggle="modal"
+          data-target="#registratemodal">REGÍSTRARSE</a>
+      </div>
+    </div>
+  </nav>
   <!-- Modal Ingresar -->
   <div class="modal fade" id="ingresarmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="ingresarModalLabel">INICIAR SESIÓN</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <form id="formaingresar">
-                  <div class="row m-2">
-                      <div class="col-12">
-                          <input type="email" class="form-control" required id="correo"
-                              placeholder="Ingrese su correo electrónico">
-                      </div>
-                  </div>
-                  <div class="row m-2">
-                      <div class="col-12">
-                          <input type="password" class="form-control" required id="contrasena"
-                              placeholder="Ingrese su contraseña">
-                      </div>
-                  </div>
-                  <div class="row text-center">
-                      <div class="col-12">
-                          <input type="submit" class="btn btn-primary" value="Ingresar">
-                          <p class="error text-danger"></p>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div class="row">
-              <div class="col-12 text-center">
-                  <span onclick="entrarGoogle()" class="btn btn-primary btn-danger">Continuar con Gmail <i
-                          class="fas fa-plus"></i></span>
-              </div>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<!-- Modal Registrate -->
-<div class="modal fade" id="registratemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="registrateModalLabel">REGÍSTRATE</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <form id="formaregistrate" autocomplete="off">
-                  <div class="row m-2">
-                      <div class="col-12">
-                          <input type="text" class="form-control" id="rnombre" required
-                              placeholder="Ingrese su nombre completo">
-                      </div>
-                  </div>
-                  <div class="row m-2">
-                      <div class="col-12">
-                          <input type="email" class="form-control" id="rcorreo" required
-                              placeholder="Ingrese su correo electrónico">
-                      </div>
-                  </div>
-                  <div class="row m-2">
-                      <div class="col-12">
-                          <input type="text" class="form-control" id="rcontrasena" required
-                              placeholder="Ingrese su contraseña">
-                      </div>
-                  </div>
-                  <div class="row m-2">
-                      <div class="col-12">
-                          <input type="number" step="any" class="form-control" id="rtelefono" required
-                              placeholder="Ingrese su teléfono">
-                      </div>
-                  </div>
-                  <div class="row m-2">
-                      <div class="col-12">
-                          <input type="text" class="form-control" id="rdireccion" required
-                              placeholder="Ingrese su dirección">
-                      </div>
-                  </div>
-                  <div class="row text-center">
-                      <div class="col-12">
-                          <input type="submit" class="btn btn-primary">
-                          <p class="error text-danger"></p>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
-          </div>
-      </div>
-  </div>
-</div>
-
-<!-- Modal MiCuenta -->
-<div class="modal fade" id="micuentamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="micuentaModalLabel">MI CUENTA</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <div class="row m-2">
-                  <div class="col-12 datosdelacuenta">
-                      ACCOUNT INFO
-                  </div>
-              </div>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
-          </div>
-      </div>
-  </div>
-</div>
-<!---->
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div  class="carousel-inner">
-              <div style="height: 400px;" class="carousel-item active">
-                <img src="./images/carrousel1.jpg" style="height: 100%; width: 100%;" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h1>GET PARKING</h1>
-                  <h3>Descubre los mejores estacionamientos para ti</h3>
-                </div>
-              </div>
-              <div style="height: 400px;" class="carousel-item">
-                <img src="./images/carrousel2.jpg" style="height: 100%; width: 100%;"  alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h1>ESTACIONAMIENTOS AL ALCANCE DE TU MANO</h1>
-                  <h3>Encuentra todos los estacionamientos de tu ciudad</h3>
-                </div>
-              </div>
-              <div style="height: 400px;" class="carousel-item">
-                  <img src="./images/carrousel3.jpg" style="height: 100%; width: 100%;"  alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h1>TU OPINIÓN ES IMPORTANTE</h1>
-                  <h3>Califica y reseña los estacionamientos que has visitado</h3>
-                </div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="ingresarModalLabel">INICIAR SESIÓN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formaingresar">
+            <div class="row m-2">
+              <div class="col-12">
+                <input type="email" class="form-control" required id="correo"
+                  placeholder="Ingrese su correo electrónico">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-   
-
-
-
-      <div class="container-fluid">
-            <div class="container">
-                  <div class="row">
-                        <div class="col-12">
-                              <h1 class="text-center">¿QUÉ SOMOS?</h1>
-                              <p style="text-align: justify;">GetParking es una aplicación gratuita con el objetivo de que te sientas más seguro al momento de buscar estacionamiento, dónde podrás ser parte de una comunidad aportando tus comentarios acerca de distintos estacionamientos donde has estado para que los demás usuarios esten enterados de que te pareció y así formar una calificación objetiva, también te ahorramos tiempo al ayudarte a encontrar estacionamientos disponibles y cerca de tu destino.</p>
-                        </div>
-                  </div>
+            <div class="row m-2">
+              <div class="col-12">
+                <input type="password" class="form-control" required id="contrasena"
+                  placeholder="Ingrese su contraseña">
+              </div>
             </div>
+            <div class="row text-center">
+              <div class="col-12">
+                <input type="submit" class="btn btn-primary" value="Ingresar">
+                <p class="error text-danger"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <span onclick="entrarGoogle()" class="btn btn-primary btn-danger">Continuar con Gmail <i
+                class="fas fa-plus"></i></span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <div class="container-fluid bg-light py-5">
-        <div class="container">
-                  <div  id="cards"  class="row">
-                        <!-- <div class="card col-12 col-md-4">
+
+  <!-- Modal Registrate -->
+  <div class="modal fade" id="registratemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registrateModalLabel">REGÍSTRATE</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formaregistrate" autocomplete="off">
+            <div class="row m-2">
+              <div class="col-12">
+                <input type="text" class="form-control" id="rnombre" required placeholder="Ingrese su nombre completo">
+              </div>
+            </div>
+            <div class="row m-2">
+              <div class="col-12">
+                <input type="email" class="form-control" id="rcorreo" required
+                  placeholder="Ingrese su correo electrónico">
+              </div>
+            </div>
+            <div class="row m-2">
+              <div class="col-12">
+                <input type="text" class="form-control" id="rcontrasena" required placeholder="Ingrese su contraseña">
+              </div>
+            </div>
+            <div class="row m-2">
+              <div class="col-12">
+                <input type="number" step="any" class="form-control" id="rtelefono" required
+                  placeholder="Ingrese su teléfono">
+              </div>
+            </div>
+            <div class="row m-2">
+              <div class="col-12">
+                <input type="text" class="form-control" id="rdireccion" required placeholder="Ingrese su dirección">
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-12">
+                <input type="submit" class="btn btn-primary">
+                <p class="error text-danger"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal MiCuenta -->
+  <div class="modal fade" id="micuentamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="micuentaModalLabel">MI CUENTA</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row m-2">
+            <div class="col-12 datosdelacuenta">
+              ACCOUNT INFO
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div style="height: 400px;" class="carousel-item active">
+        <img src="./images/carrousel1.jpg" style="height: 100%; width: 100%;" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>GET PARKING</h1>
+          <h3>Descubre los mejores estacionamientos para ti</h3>
+        </div>
+      </div>
+      <div style="height: 400px;" class="carousel-item">
+        <img src="./images/carrousel2.jpg" style="height: 100%; width: 100%;" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>ESTACIONAMIENTOS AL ALCANCE DE TU MANO</h1>
+          <h3>Encuentra todos los estacionamientos de tu ciudad</h3>
+        </div>
+      </div>
+      <div style="height: 400px;" class="carousel-item">
+        <img src="./images/carrousel3.jpg" style="height: 100%; width: 100%;" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>TU OPINIÓN ES IMPORTANTE</h1>
+          <h3>Califica y reseña los estacionamientos que has visitado</h3>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">¿QUÉ SOMOS?</h1>
+          <p style="text-align: justify;">GetParking es una aplicación gratuita con el objetivo de que te sientas más
+            seguro al momento de buscar estacionamiento, dónde podrás ser parte de una comunidad aportando tus
+            comentarios acerca de distintos estacionamientos donde has estado para que los demás usuarios esten
+            enterados de que te pareció y así formar una calificación objetiva, también te ahorramos tiempo al ayudarte
+            a encontrar estacionamientos disponibles y cerca de tu destino.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-light py-5">
+    <div class="container">
+      <div id="cards" class="row">
+        <!-- <div class="card col-12 col-md-4">
                               <a name="servicios"></a>
                               <img src="./images/CARD1.jpg" alt="card1" class="w-100 rounded shadow">
                               <h2 style="text-align:center;" class="p-3">SEGURIDAD</h2>
@@ -246,71 +268,60 @@
                               <h2 style="text-align:center;" class="p-3">PROMOCIÓN</h2>
                               <p style="text-align: justify;">¿Quieres destacar tu estacionamiento o promocionar tu marca? Contáctanos y podremos ofrecerte diferentes paquetes acorde a tus necesidades para apoyarte a logar un mayor alcance</p>
                         </div> -->
-                  </div>
-            </div> 
       </div>
+    </div>
+  </div>
 
-      <div class="container-fluid py-5">
-            <div class="container">
-                  <div class="row">
-                        <div class="col-12">
-                              <a name="mapadeubicacion"></a>
-                              <h2 class="text-center">ESTACIONAMIENTOS CERCA DE TI</h2>
-                              <div id="mapa"></div>
-                        </div>
-                  </div>
-            </div>
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <a name="mapadeubicacion"></a>
+          <h2 class="text-center">ESTACIONAMIENTOS CERCA DE TI</h2>
+          <div id="mapa"></div>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <div class="container-fluid footer py-5">
-            <div class="container">
-                  <div class="row">
-                        <div class="col-12">
-                              <h3 class="text-white">CONTACTO</h3>
-                              <p style="text-align: justify;" class="text-white">
-                                    getparkingapp@gmail.com
-                              </p>
-<div>
-      <a>
-            <a href="https://www.facebook.com/Get-Parking-106139718297132"><img src="images/facebook.png" style="width: 20px; height: 20px;" alt="facebook"></a>
-            <a href="https://getparkingleon.blogspot.com/"><img src="images/blogger.png" style="width: 20px; height: 20px;" alt="facebook"></a>
-      </a>
+  <div class="container-fluid footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-white">CONTACTO</h3>
+          <p style="text-align: justify;" class="text-white">
+            getparkingapp@gmail.com
+          </p>
+          <div>
+            <a>
+              <a href="https://www.facebook.com/Get-Parking-106139718297132"><img src="images/facebook.png"
+                  style="width: 20px; height: 20px;" alt="facebook"></a>
+              <a href="https://getparkingleon.blogspot.com/"><img src="images/blogger.png"
+                  style="width: 20px; height: 20px;" alt="facebook"></a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-                        </div>
-                  </div>
-            </div>
-      </div>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-      <!-- <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-        apiKey: "AIzaSyArvJbOGzW97CmNwmhJuYZXcUwCSJU40nU",
-        authDomain: "eats-11396.firebaseapp.com",
-        projectId: "eats-11396",
-        storageBucket: "eats-11396.appspot.com",
-        messagingSenderId: "406752767746",
-        appId: "1:406752767746:web:86cb8652c2aae017161c1b"
-      };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-    
-            const auth = firebase.auth();
-    
-            const db = firebase.firestore();
-    
-        </script> -->
-        <script type="text/javascript" src="conn.js"></script>  
-      <script type="text/javascript" src="auth.js"></script>
-      <script type="text/javascript" src="App.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script type="text/javascript" src="conn.js"></script>
+  <script type="text/javascript" src="auth.js"></script>
+  <script type="text/javascript" src="App.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
 
-      <!-- Google Maps -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN40d7aaWEs6QETDAdoRdAUxd_H_c5YSI&callback=iniciaMapa" async defer></script>
+  <!-- Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN40d7aaWEs6QETDAdoRdAUxd_H_c5YSI&callback=iniciaMapa"
+    async defer></script>
 
-      <!-- AOS -->
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
+
 </html>

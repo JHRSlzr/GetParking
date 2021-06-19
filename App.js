@@ -1,3 +1,7 @@
+const listaloggedout = document.querySelectorAll(".logged-out");
+const listaloggedin = document.querySelectorAll(".logged-in");
+const datosdelacuenta = document.querySelector(".datosdelacuenta");
+
 var initCoords = {
       lat: 21.128398,
       lng: -101.6486384
@@ -302,58 +306,56 @@ function iniciaMapa() {
       }
       )
 };
-const listaloggedout = document.querySelectorAll(".logged-out");
-const listaloggedin = document.querySelectorAll(".logged-in");
-const datosdelacuenta = document.querySelector(".datosdelacuenta");
+
 
 const configuraMenu = (user) => {
-  if (user) {
-    db.collection("usuarios")
-      .doc(user.uid)
-      .get()
-      .then((doc) => {
-        const html = `
-                <p>Nombre: ${doc.data().nombre}</p>
-                <p>Correo: ${user.email}</p>
-                <p>Teléfono: ${doc.data().telefono}</p>
-                <p>Dirección: ${doc.data().direccion}</p>
-            `;
-        datosdelacuenta.innerHTML = html;
+    if (user) {
+      db.collection("usuarios")
+        .doc(user.uid)
+        .get()
+        .then((doc) => {
+          const html = `
+                  <p>Nombre: ${doc.data().nombre}</p>
+                  <p>Correo: ${user.email}</p>
+                  <p>Teléfono: ${doc.data().telefono}</p>
+                  <p>Dirección: ${doc.data().direccion}</p>
+              `;
+          datosdelacuenta.innerHTML = html;
+        });
+  
+      listaloggedin.forEach((item) => (item.style.display = "block"));
+      listaloggedout.forEach((item) => (item.style.display = "none"));
+    } else {
+      datosdelacuenta.innerHTML = "";
+      listaloggedin.forEach((item) => (item.style.display = "none"));
+      listaloggedout.forEach((item) => (item.style.display = "block"));
+    }
+  };
+  
+  const cards = document.getElementById("cards");
+  
+  const obtieneCards = (data) => {
+    if (data.length) {
+      let html = "";
+  
+      data.forEach((doc) => {
+        const card = doc.data();
+        console.log(card);
+        const columna = `
+        <div class="card col-12 col-md-4">
+        <a name="servicios"></a>
+        <img src="${card.imagen}" alt="card1" class="w-100 rounded shadow">
+        <h2 style="text-align:center;" class="p-3">${card.titulo}</h2>
+        <p style="text-align: justify;">${card.subtitulo}</p>
+  </div>
+              `;
+  
+        html += columna;
       });
-
-    listaloggedin.forEach((item) => (item.style.display = "block"));
-    listaloggedout.forEach((item) => (item.style.display = "none"));
-  } else {
-    datosdelacuenta.innerHTML = "";
-    listaloggedin.forEach((item) => (item.style.display = "none"));
-    listaloggedout.forEach((item) => (item.style.display = "block"));
-  }
-};
-
-const listacards = document.getElementById("cards");
-
-const obtieneCards = (data) => {
-  if (data.length) {
-    let html = "";
-
-    data.forEach((doc) => {
-      const card = doc.data();
-      console.log(card);
-      const columna = `
-            <div class="card col-12 col-md-4">
-                  <a name="servicios"></a>
-                  <img src="${card.imagen}" alt="card1" class="w-100 rounded shadow">
-                  <h2 style="text-align:center;" class="p-3">${card.titulo}</h2>
-                  <p style="text-align: justify;">${card.subtitulo}</p>
-            </div>
-            `;
-
-      html += columna;
-    });
-
-    listacards.innerHTML = html;
-  } else {
-    listacards.innerHTML =
-      '<p class="text-center">INICIE SESIÓN PARA PODER LAS TARJETAS.</p>';
-  }
-};
+  
+      cards.innerHTML = html;
+    } else {
+        cards.innerHTML =
+        '<p class="text-center">INICIE SESIÓN PARA PODER VER SUS TAJETAS.</p>';
+    }
+  };
